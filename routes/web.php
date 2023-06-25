@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProfileController;
@@ -27,3 +28,5 @@ Route::resource('faqs', FaqController::class);
 Route::resource('articles', ArticleController::class);
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/contact', [ContactController::class, 'show']);
+
+Auth::routes();
