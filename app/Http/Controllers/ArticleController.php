@@ -52,7 +52,8 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        return view('articles.show', compact('article'));
+        if(!Auth::user()) return redirect()->back();
+            return view('articles.show', compact('article'));
     }
 
     /**
@@ -100,4 +101,5 @@ class ArticleController extends Controller
             'body' => 'required',
         ]);
     }
+    
 }
