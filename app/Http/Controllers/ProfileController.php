@@ -60,4 +60,9 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function show(){
+        if(!Auth::user()) return redirect()->back();
+        return view('profile');
+    }
 }

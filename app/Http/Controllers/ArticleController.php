@@ -52,7 +52,6 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        if(!Auth::user()) return redirect()->back();
             return view('articles.show', compact('article'));
     }
 
