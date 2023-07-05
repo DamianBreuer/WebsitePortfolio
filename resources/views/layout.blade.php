@@ -16,6 +16,12 @@
         <li><a href="/articles">Blog</a></li>
         <li><a href="/faqs">FAQ</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
+        <li>
+            <form action="{{route('logout')}}" method="post">
+                @csrf
+                <button style="padding: 200px" type="submit">logout</button>
+            </form>
+        </li>
         <li style="float:right"><a href="/contact">Contact</a></li>
     </ul>
     <div class="sidebar">
