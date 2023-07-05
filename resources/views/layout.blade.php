@@ -17,10 +17,14 @@
         <li><a href="/faqs">FAQ</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
         <li>
-            <form action="{{route('logout')}}" method="post">
-                @csrf
-                <button style="padding: 200px" type="submit">logout</button>
-            </form>
+            @if (auth()->user())
+                <form action="{{route('logout')}}" method="post">
+                    @csrf
+                    <button style="padding: 200px" type="submit">logout</button>
+                </form>
+            @else
+                <a style="padding: 200px; background-color: white" href="{{route('login')}}">logout</a>
+            @endif
         </li>
         <li style="float:right"><a href="/contact">Contact</a></li>
     </ul>
