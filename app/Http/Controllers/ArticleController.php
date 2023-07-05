@@ -51,7 +51,8 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Article $article)
-    {
+    {   
+        if(!Auth::user()) return redirect()->back();
             return view('articles.show', compact('article'));
     }
 
