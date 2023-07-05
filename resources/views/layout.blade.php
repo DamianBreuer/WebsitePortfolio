@@ -20,7 +20,7 @@
             @if (auth()->user())
                 <form action="{{route('logout')}}" method="post">
                     @csrf
-                    <button style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit" type="submit">Logout</button>
+                    <a><button style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit" type="submit">Logout</button></a>
                 </form>
             @else
                 <a href="{{route('login')}}">Login</a>
