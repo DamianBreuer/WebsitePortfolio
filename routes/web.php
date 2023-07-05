@@ -25,7 +25,7 @@ Route::get('/posts/{post}',[PostsController::class, 'show']);
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::resource('faqs', FaqController::class);
-Route::resource('articles', ArticleController::class);
+Route::resource('articles', ArticleController::class)->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'show']);
 Route::get('/contact', [ContactController::class, 'show']);
 
