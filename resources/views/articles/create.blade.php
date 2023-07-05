@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <form method ="POST" action="{{route('articles.store')}}">
+    <form method="POST" action="{{route('articles.store')}}">
         @csrf
         <input type="text" name="title" placeholder="Enter Title" required/>
         <div id="foutpreventie-title">
